@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+constructor(private router:Router){}
+  input(){
+    this.router.navigate(["./input"])
+  }
+  result(){
+    this.router.navigate(["./result"])
+  }
+
 
 }
